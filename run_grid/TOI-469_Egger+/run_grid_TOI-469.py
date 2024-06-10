@@ -2,11 +2,12 @@
 # --- plaNETic ---
 # INFERRING THE INTERNAL STRUCTURE OF AN OBSERVED EXOPLANET
 # EXECUTABLE FOR TOI-469
-# Jo Ann Egger and Yann Alibert, Universität Bern
+# Written by Jo Ann Egger, Universität Bern
+# Copyright (c) 2024, Jo Ann Egger, Universität Bern
 # *****************************************************************************
 import os
 import sys
-sys.path.append('/Users/joannegger/Documents/PhD/Code_new/plaNETic/run_grid')
+sys.path.append('..')
 
 import plaNETic
 

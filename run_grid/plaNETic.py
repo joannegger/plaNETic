@@ -1,7 +1,8 @@
 # *****************************************************************************
 # --- plaNETic ---
 # CODE FOR INFERING THE INTERNAL STRUCTURE OF AN OBSERVED EXOPLANET
-# Jo Ann Egger and Yann Alibert, Universität Bern
+# Written by Jo Ann Egger and Yann Alibert, Universität Bern
+# Copyright (c) 2024, Jo Ann Egger, Universität Bern
 # *****************************************************************************
 
 # IMPORTS
