@@ -4,7 +4,7 @@ It uses a full grid accept-reject sampling algorithm with neural networks traine
 The code allows for different choices in priors concerning the expected abundance of water (formation inside vs. outside of iceline) and the planetary Si/Mg/Fe ratios (stellar vs. iron-enriched vs. free). 
 For a more detailed description of the features of the code, we refer to Egger et al. 2024.
 
-If you use this code, please cite Egger et al. 2024 (link), where the *plaNETic* framework was introduced for the first time.  
+If you use this code, please cite Egger et al. 2024 (link), where the *plaNETic* framework was introduced for the first time. 
 If you use the trained neural networks provided, please also cite [Haldemann et al. 2024](https://ui.adsabs.harvard.edu/abs/2024A%26A...681A..96H/abstract).  
 
 We run the code on a 2021 MacBook Pro with an Apple M1 Pro chip.  
