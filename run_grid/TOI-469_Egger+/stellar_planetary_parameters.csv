@@ -1,0 +1,4 @@
+﻿Name,Nplanets_system,Age[Gyr],Age_e[Gyr],Age_E[Gyr],Mstar[Msun],Mstar_e[Msun],Mstar_E[Msun],Rstar[Rsun],Rstar_e[Rsun],Rstar_E[Rsun],Teff[K],Teff_e[K],Teff_E[K],SiH,SiH_e,SiH_E,MgH,MgH_e,MgH_E,FeH,FeH_e,FeH_E,P[day],P_e[day],P_E[day],m[M_Earth],m_e[M_Earth],m_E[M_Earth],KRV[ms-1],KRV_e[ms-1],KRV_E[ms-1],R[R_Earth],R_e[R_Earth],R_E[R_Earth],rr,rr_e,rr_E,td[ppm],td_e[ppm],td_E[ppm]
+TOI-469,3,11.2,3.4,3.4,0.901,0.043,0.043,0.98,0.007,0.007,5289,69,69,0.21,0.04,0.04,0.26,0.04,0.04,0.24,0.05,0.05,13.6308205,0.00000902,0.00000902,9.1,0.79,0.82,2.63,0.19,0.2,if radius,,,0.03194777,0.0003197,0.0003197,if transit depth,,
+,,,,,,,,,,,,,,,,,,,,,,,3.5379559,0.00000824,0.00000729,4.5,0.32,0.32,2.04,0.11,0.11,,,,0.01452805,0.00039721,0.00039721,,,
+,,,,,,,,,,,,,,,,,,,,,,,6.42957486,0.00002557,0.00002557,5.14,0.41,0.41,1.91,0.12,0.12,,,,0.01440464,0.00044198,0.00044198,,,

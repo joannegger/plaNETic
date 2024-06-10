@@ -1,0 +1,10 @@
+*/*/plots/*.pdf
+*/*/plots/*.png
+*/*/posteriors/*.npy
+*/*/gas_posteriors/*.txt
+*/*/*.ipynb
+*/*/.DS_Store
+*/.DS_Store
+*/*/__pycache__
+*/__pycache__
+.DS_Store
