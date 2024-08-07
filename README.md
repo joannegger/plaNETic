@@ -13,6 +13,9 @@ For questions or comments, feel free to contact Jo Ann Egger (jo-ann.egger@unibe
 If you use this code, please cite [Egger et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240618653E/abstract), where the *plaNETic* framework was introduced for the first time.  
 If you use the trained neural networks provided, please also cite [Haldemann et al. 2024](https://ui.adsabs.harvard.edu/abs/2024A%26A...681A..96H/abstract).  
 
+## Installation
+git clone plaNETic and run "pip install ."
+
 ## Example
 To infer the internal structure of the planets in an observed planetary system, create a new subfolder in *run_grid* with the same structure as *TOI-469_Egger+*:
 - Subfolders *posteriors*, *plots*
