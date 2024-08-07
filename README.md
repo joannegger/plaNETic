@@ -10,7 +10,7 @@ We run the code on a 2021 MacBook Pro with an Apple M1 Pro chip.
 For questions or comments, feel free to contact Jo Ann Egger (jo-ann.egger@unibe.ch).
 
 ## Citations
-If you use this code, please cite [Egger et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240618653E/abstract), where the *plaNETic* framework was introduced for the first time. 
+If you use this code, please cite [Egger et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240618653E/abstract), where the *plaNETic* framework was introduced for the first time.  
 If you use the trained neural networks provided, please also cite [Haldemann et al. 2024](https://ui.adsabs.harvard.edu/abs/2024A%26A...681A..96H/abstract).  
 
 ## Example
