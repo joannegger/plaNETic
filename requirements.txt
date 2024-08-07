@@ -1,0 +1,14 @@
+pylab
+numpy
+matplotlib
+scipy
+seaborn
+pandas
+tensorflow
+sklearn
+datetime
+pickle
+corner
+h5py
+ternary
+tqdm
