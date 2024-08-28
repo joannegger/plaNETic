@@ -2094,8 +2094,8 @@ def make_slurm_submit_file(n_samples, comp_option_mass, comp_option_radius, with
 
 # Executables
 # --------------------------------------------------------------------------------------------------------------------------------------------------------
-def compute_posterior(comp_option_mass, comp_option_radius, SiMgFe_ratio_option, water_mixing_option, luminosity_option, use_log_prior_for_gas_mass=True, with_gas=True, with_water=True, csv_file='stellar_planetary_parameters.csv', comment='', verbose=True, save_prior=True):
-    obs, nplanets_total, nsystems_total = read_csv_info(comp_option_mass, comp_option_radius, with_gas, with_water, csv_file, comment=comment, verbose=verbose)
+def compute_posterior(comp_option_mass, comp_option_radius, SiMgFe_ratio_option, water_mixing_option, luminosity_option, use_log_prior_for_gas_mass=True, with_gas=True, with_water=True, csv_file='stellar_planetary_parameters.csv', comment='', verbose=True, save_prior=True, date_string='auto'):
+    obs, nplanets_total, nsystems_total = read_csv_info(comp_option_mass, comp_option_radius, with_gas, with_water, csv_file, comment=comment, verbose=verbose, date_string=date_string)
 
     count_m1 = 0
     count_m2 = 0

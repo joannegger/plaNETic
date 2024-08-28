@@ -10,7 +10,6 @@ setup(
         'mpltern==1.0.2',
         'pandas==1.4.1',
         'pickleshare==0.7.5',
-        'pip==22.1.2',
         'python-ternary',
         'scipy==1.8.1',
         'seaborn',

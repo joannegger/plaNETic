@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+plaNETic.egg-info/PKG-INFO
+plaNETic.egg-info/SOURCES.txt
+plaNETic.egg-info/dependency_links.txt
+plaNETic.egg-info/requires.txt
+plaNETic.egg-info/top_level.txt

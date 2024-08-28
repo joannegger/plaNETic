@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: plaNETic
+Version: 0.1.0
+Summary: A neural network-based Bayesian internal structure modelling framework for small exoplanets
+Home-page: https://github.com/joannegger/plaNETic
+Author: Jo Ann Egger
+Author-email: jo-ann.egger@unibe.ch
+License-File: LICENSE
+Requires-Dist: corner==2.2.1
+Requires-Dist: matplotlib
+Requires-Dist: mpltern==1.0.2
+Requires-Dist: pandas==1.4.1
+Requires-Dist: pickleshare==0.7.5
+Requires-Dist: pip==22.1.2
+Requires-Dist: python-ternary
+Requires-Dist: scipy==1.8.1
+Requires-Dist: seaborn
+Requires-Dist: tqdm
+Requires-Dist: wheel
+Requires-Dist: datetime
+Requires-Dist: h5py==3.11.0
+Requires-Dist: numpy==1.24.4
+Requires-Dist: scikit-learn
+Requires-Dist: tensorflow-metal==0.3.0
+Requires-Dist: tensorflow-macos==2.7.0
+Requires-Dist: protobuf<=3.21
