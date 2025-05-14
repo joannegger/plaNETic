@@ -1,3 +1,5 @@
+![plaNETic Logo](logo/plaNETicLogo_reduced.png)
+
 # plaNETic
 *plaNETic* is a neural network-based Bayesian internal structure modelling framework for small exoplanets with masses between 0.5 and 15 Mearth. 
 The code efficiently computes posteriors of a planet's internal structure based on its observed planetary and stellar parameters. 
