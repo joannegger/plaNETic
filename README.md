@@ -16,6 +16,11 @@ If you use the trained neural networks provided, please also cite [Haldemann et 
 ## Installation
 git clone plaNETic and run "pip install ."
 
+If downloading the DNNs causes an error, please contact Jo Ann Egger (jo-ann.egger@unibe.ch) while we are looking for a more permanent data storage solution.
+
+If you are running the code on a MacBook with an Apple silicon chip, make sure tensorflow has access to the built-in GPU for a much faster code execution. 
+You can follow for example this tutorial: https://medium.com/bluetuple-ai/how-to-enable-gpu-support-for-tensorflow-or-pytorch-on-macos-4aaaad057e74
+
 ## Example
 To infer the internal structure of the planets in an observed planetary system, create a new subfolder in *run_grid* with the same structure as *TOI-469_Egger+*:
 - Subfolders *posteriors*, *plots*
