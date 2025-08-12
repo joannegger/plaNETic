@@ -41,7 +41,7 @@ import ternary
 from scipy.ndimage.filters import gaussian_filter
 import tqdm
 from scipy import interpolate
-
+from scipy.stats import truncnorm
 
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1172,6 +1172,14 @@ def compute_Bondi_radius(m_planet, Teq, Z_atmo):
 
     return (gamma-1)/gamma * (constG*m_planet*Mearth*mu)/(const_kb*Teq*Rearth)
 
+def truncated_positive_normal(mu, sigma, shape):
+    a, b = 0, np.inf
+    a_norm = (a - mu) / sigma
+    b_norm = (b - mu) / sigma
+    size = np.prod(shape)
+    samples = truncnorm.rvs(a_norm, b_norm, loc=mu, scale=sigma, size=size)
+    return samples.reshape(shape)
+
 def sample_Teq_and_Zatmo(planets, stars, nplanets, water_mixing_option):
     planet_list = []
     for i in range(nplanets): # different planets in the system
@@ -1208,7 +1216,7 @@ def sample_Teq_and_Zatmo(planets, stars, nplanets, water_mixing_option):
         if water_mixing_option == 'uniform':
             Z_atmo = w_water/(w_water+w_gas)
         else: #water_mixing_option == 'water_from_gas':
-            Z_atmo = np.random.normal(0.005, 0.0025, np.shape(Teq))
+            Z_atmo = truncated_positive_normal(0.005, 0.0025, np.shape(Teq))
             w_water = w_gas * Z_atmo
             planet[:,8] = w_gas * (1-Z_atmo)
     
@@ -1379,39 +1387,48 @@ def generate_single_planet(parameters_target, sigmas_target, stars, iplanet, npl
     planets, stars = sample_simplex_coordinates(planets,stars,nplanets)
     if debug_planet_generation:
         print('After sampling simplex coordinates:     ', np.shape(planets),np.shape(stars))
+        print(planets)
         
     planets, stars = sample_mass_fractions(planets,stars,nplanets)
     if debug_planet_generation:
         print('After sampling mass fractions:          ', np.shape(planets),np.shape(stars))
+        print(planets)
     
     planets = sample_gas_fraction(planets,nplanets,use_log_prior_for_gas_mass,with_gas)
     if debug_planet_generation:
         print('After sampling gas fraction:            ', np.shape(planets),np.shape(stars))
+        print(planets)
     
     planets = sample_luminosity(planets,stars,nplanets,luminosity_option)
     if debug_planet_generation:
         print('After sampling luminosity:              ', np.shape(planets),np.shape(stars))
+        print(planets)
 
     planets = sample_period(planets,param_iplanet,sig_iplanet,stars,nplanets)
     if debug_planet_generation:
         print('After sampling period:                  ', np.shape(planets),np.shape(stars))
+        print(planets)
     
     planets, stars = sample_SiMgFe_ratios(planets,stars,nplanets,SiMgFe_ratio_option)
     if debug_planet_generation:
         print('After sampling Si/Mg/Fe ratios:         ', np.shape(planets),np.shape(stars))
+        print(planets)
     
     planets, stars = compute_mantle_composition(planets,stars,nplanets,SiMgFe_ratio_option)
     if debug_planet_generation:
         print('After computing mantle composition:     ', np.shape(planets),np.shape(stars))
+        print(planets)
 
     planets, stars = sample_Teq_and_Zatmo(planets,stars,nplanets,water_mixing_option)
     if debug_planet_generation:
         print('After sampling Teq and Zatmo:           ', np.shape(planets),np.shape(stars))
+        print(planets)
     
     if not prior:
         planets, stars = compute_radius(planets,stars,param_iplanet,sig_iplanet,nplanets,mass_range[iplanet],dnn_prediction,scaler_x_prediction,scaler_y_prediction,comp_option_radius,water_mixing_option)
         if debug_planet_generation:
             print('After computing transit radius:         ', np.shape(planets),np.shape(stars))
+            print(planets)
 
     return planets, stars
 
@@ -1571,8 +1588,8 @@ def run_grid(nplanets_system,parameters_star,sigmas_star,parameters_target,sigma
     star_list = []
     
     # size of grid: 100M planets total
-    N_stars = 10000
-    N_planets = 10000
+    N_stars = 10000#10000
+    N_planets = 10000#10000
     
     # generate stars
     star = generate_stars(N_stars, parameters_star, sigmas_star, debug_star_generation=False)
