@@ -8,7 +8,7 @@ Furthermore, it allows for different choices in priors concerning the expected a
 For a more detailed description of the features of the code, we refer to [Egger et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240618653E/abstract), where the code was first introduced and applied to a planetary system.
 
 We run the code on a 2021 MacBook Pro with an Apple M1 Pro chip.  
-For questions or comments, feel free to contact Jo Ann Egger (jo-ann.egger@unibe.ch).
+For questions or comments, feel free to contact Jo Ann Egger (joann.egger@esa.int).
 
 ## Citations
 If you use this code, please cite [Egger et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240618653E/abstract), where this version of the *plaNETic* framework was introduced for the first time.  
@@ -20,7 +20,7 @@ If you used the code for your own publication, reach out to us and we will add i
 ## Installation
 git clone plaNETic and run "pip install ."
 
-If downloading the DNNs causes an error, please contact Jo Ann Egger (jo-ann.egger@unibe.ch) while we are looking for a more permanent data storage solution.
+If downloading the DNNs causes an error, please contact Jo Ann Egger (joann.egger@esa.int) while we are looking for a more permanent data storage solution.
 
 If you are running the code on a MacBook with an Apple silicon chip, make sure tensorflow has access to the built-in GPU for a much faster code execution. 
 You can follow for example this tutorial: https://medium.com/bluetuple-ai/how-to-enable-gpu-support-for-tensorflow-or-pytorch-on-macos-4aaaad057e74
