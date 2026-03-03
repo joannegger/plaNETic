@@ -8,7 +8,7 @@ Furthermore, it allows for different choices in priors concerning the expected a
 For a more detailed description of the features of the code, we refer to [Egger et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240618653E/abstract), where the code was first introduced and applied to a planetary system. 
 An up-to-date list of publications that are using the plaNETic code can be found in [this ADS library](https://ui.adsabs.harvard.edu/public-libraries/1gUfHn6dR5qTwZ9phcfNMg).  
 
-If you want to use this code, please get in contact with Jo Ann Egger (joann.egger@esa.int). The plaNETic team is happy to provide support with running the code and interpreting the results.  
+If you want to use this code, please get in contact with Jo Ann Egger (joann.egger@esa.int). The plaNETic team is happy to collaborate on your project, especially by providing support with running the code and helping to interpret the results.  
 
 ## Citations
 If you use this code, please cite [Egger et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240618653E/abstract), where this version of the plaNETic framework was introduced for the first time. If you also use the trained neural networks provided, please also cite [Haldemann et al. 2024](https://ui.adsabs.harvard.edu/abs/2024A%26A...681A..96H/abstract).  
@@ -37,5 +37,59 @@ If plaNETic cannot find the trained DNNs, this is an issue with GitHub's Large F
 Depending on your machine, changing the batch size when running the neural network (in the function 'compute_radius', line 1308 of 'plaNETic.py') might improve the performance of the code.  
 
 ## Example
-To ensure the code is running correctly, we recommend running it for TOI-238 b. To do that, navigate into 'run_grid/TOI-238_Egger+' and run the executable 'run_grid_TOI-238.py'. On a MacBook with an M4 Pro Apple Silicon chip, this gives us the following output:  
+To ensure the code is running correctly, we recommend running it for TOI-238 b. To do that, navigate into 'run_grid/TOI-238_Egger+' and run the executable 'run_grid_TOI-238.py' with Python. On a MacBook with an M4 Pro Apple Silicon chip, this gives us the following output:  
 
+```
+Metal device set to: Apple M4 Pro  
+  
+systemMemory: 48.00 GB  
+maxCacheSize: 18.00 GB  
+  
+Option A1:  
+100%|████████████████████████| 9429/9429 [13:41<00:00, 11.47it/s]  
+Shape of posteriors:  
+(1, 771909, 28)  
+100%|████████████████████████| 939/939 [00:00<00:00, 1979.29it/s]  
+Shape of priors:  
+(1, 117814, 28)  
+  
+Option A2:  
+100%|████████████████████████| 9429/9429 [14:37<00:00, 10.74it/s]  
+Shape of posteriors:  
+(1, 1941179, 28)  
+100%|████████████████████████| 939/939 [00:00<00:00, 1890.20it/s]  
+Shape of priors:  
+(1, 140433, 28)  
+  
+Option A3:  
+100%|████████████████████████| 9429/9429 [11:17<00:00, 13.92it/s]  
+Shape of posteriors:  
+(1, 855115, 28)  
+100%|████████████████████████| 939/939 [00:00<00:00, 1776.27it/s]  
+Shape of priors:  
+(1, 72619, 28)  
+  
+Option B1:  
+100%|████████████████████████| 9429/9429 [15:24<00:00, 10.20it/s]  
+Shape of posteriors:  
+(1, 16505, 28)  
+100%|████████████████████████| 939/939 [00:00<00:00, 1728.45it/s]  
+Shape of priors:  
+(1, 156788, 28)  
+  
+Option B2:  
+100%|████████████████████████| 9429/9429 [16:54<00:00,  9.29it/s]  
+Shape of posteriors:  
+(1, 1113545, 28)  
+100%|████████████████████████| 939/939 [00:00<00:00, 1643.45it/s]  
+Shape of priors:  
+(1, 187370, 28)  
+  
+Option B3:  
+100%|████████████████████████| 9429/9429 [12:18<00:00, 12.77it/s]  
+Shape of posteriors:  
+(1, 570407, 28)  
+100%|████████████████████████| 939/939 [00:00<00:00, 1607.09it/s]  
+Shape of priors:  
+(1, 96893, 28)
+```
