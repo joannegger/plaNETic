@@ -42,6 +42,10 @@ from scipy.ndimage.filters import gaussian_filter
 import tqdm
 from scipy import interpolate
 from scipy.stats import truncnorm
+import gc
+
+tf.keras.backend.clear_session()
+gc.collect()
 
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1301,7 +1305,7 @@ def compute_radius(planets, stars, parameters_target, sigmas_target, nplanets, m
             parameters_unscaled = np.concatenate([Teq.reshape(-1,1), Z_atmo.reshape(-1,1), np.log10(luminosity.reshape(-1,1)), mass_planet.reshape(-1,1), w_core.reshape(-1,1), np.log10((w_gas+w_water).reshape(-1,1)), x_S_core.reshape(-1,1), x_Si_mantle.reshape(-1,1), x_Mg_mantle.reshape(-1,1)], axis=1)
 
         parameters_scaled_prediction = scaler_x_prediction[int(mass_range)].transform(parameters_unscaled)
-        Rtot = dnn_prediction[int(mass_range)].predict(parameters_scaled_prediction)
+        Rtot = dnn_prediction[int(mass_range)].predict(parameters_scaled_prediction, batch_size=128)
         Rtot = scaler_y_prediction[int(mass_range)].inverse_transform(Rtot)
         transit_depth = (Rtot*Rearth/(R_star.reshape(-1,1)*Rsun))**2*1.e6
 
@@ -2188,6 +2192,7 @@ def compute_posterior(comp_option_mass, comp_option_radius, SiMgFe_ratio_option,
         print('Error: No DNNs loaded')
         exit()
 
+    print('Option ' + comment + ':')
     count = 0
     for j in range(nsystems_total):
         file = obs['Name'].iloc[count]
@@ -2212,6 +2217,7 @@ def compute_posterior(comp_option_mass, comp_option_radius, SiMgFe_ratio_option,
 
         # update count: index of first planet in next system
         count += obs['Nplanets_system'].iloc[count]
+    print('')
 
 def make_plots(comp_option_mass, comp_option_radius, with_gas, with_water, csv_file, comment='', date_string='', verbose=True):
     obs, nplanets_total, nsystems_total = read_csv_info(comp_option_mass, comp_option_radius, with_gas, with_water, csv_file, comment=comment, date_string=date_string, verbose=verbose)
