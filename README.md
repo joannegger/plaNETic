@@ -93,3 +93,5 @@ Shape of posteriors:
 Shape of priors:  
 (1, 96893, 28)
 ```
+
+As shown above, the inference process for one planet and prior option takes around 10-15 minutes on our machine. In multiplanetary systems, all planets are modelled simultaneously, with the computation time scaling linearly with the number of planets.
