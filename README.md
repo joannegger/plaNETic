@@ -5,7 +5,9 @@ The code efficiently computes posteriors of a planet's internal structure based 
 It uses a full grid accept-reject sampling algorithm with neural networks trained on the interior model of the [BICEPS code](https://ui.adsabs.harvard.edu/abs/2024A%26A...681A..96H/abstract) as a fast surrogate for the forward model. 
 Furthermore, it allows for different choices in priors concerning the expected abundance of water (formation inside vs. outside of iceline) and the planetary Si/Mg/Fe ratios (stellar vs. iron-enriched vs. free).  
 
-For a more detailed description of the features of the code, we refer to [Egger et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240618653E/abstract), where the code was first introduced and applied to a planetary system. 
+For a more detailed description of the features of the code, we refer to [Egger et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240618653E/abstract), where this version of the code was first introduced and applied to a planetary system.
+A preliminary version of the code was first used in [Leleu, Alibert et al. 2021](https://ui.adsabs.harvard.edu/abs/2021A%26A...649A..26L/abstract) and used in a large number of observational publications.  
+
 An up-to-date list of publications that are using the plaNETic code can be found in [this ADS library](https://ui.adsabs.harvard.edu/public-libraries/1gUfHn6dR5qTwZ9phcfNMg).  
 
 ## Using this code
