@@ -11,7 +11,7 @@ An up-to-date list of publications that are using the plaNETic code can be found
 ## Using this code
 If you want to use this code, please get in contact with Jo Ann Egger (joann.egger@esa.int). The plaNETic team is happy to collaborate on your project, especially by providing support with running the code and helping to interpret the results.  
 
-If you use the plaNETic framework, please cite [Egger et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240618653E/abstract), where this version of the plaNETic framework was introduced for the first time. If you also use the trained neural networks provided, please also cite [Haldemann et al. 2024](https://ui.adsabs.harvard.edu/abs/2024A%26A...681A..96H/abstract).  
+If you use the plaNETic framework, please cite [Egger et al. 2024](https://ui.adsabs.harvard.edu/abs/2024arXiv240618653E/abstract), where this version of the code was introduced for the first time. If you also use the trained neural networks provided, please also cite [Haldemann et al. 2024](https://ui.adsabs.harvard.edu/abs/2024A%26A...681A..96H/abstract).  
 
 ## Installation
 plaNETic needs access to a GPU to run efficiently. While it is in principle possible to run the code on CPUs only, this will drastically increase the computation time and is not recommended.  
