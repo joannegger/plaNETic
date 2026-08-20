@@ -96,4 +96,6 @@ Shape of priors:
 (1, 96893, 28)
 ```
 
-As shown above, the inference process for one planet and prior option takes around 10-15 minutes on our machine. In multiplanetary systems, all planets are modelled simultaneously, with the computation time scaling linearly with the number of planets.
+As shown above, the inference process for one planet and prior option takes around 10-15 minutes on our machine. In multiplanetary systems, all planets are modelled simultaneously, with the computation time scaling linearly with the number of planets.  
+
+If necessary, the computation time can be decreased by reducing the number of sampled stars (default: 10'000) and planets per sampled star (default: 10'000). However, this will lead to smaller posterior distributions.
