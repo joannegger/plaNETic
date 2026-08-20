@@ -12,11 +12,11 @@ sys.path.append('..')
 import plaNETic
 from datetime import date
 
-comp_option_mass = 0                        # 0 - relative mass, 1 - planet mass
-comp_option_radius = 1                      # 0 - transit depth, 1 - radius ratio, 2 - planet radius
-with_gas = True
-with_water = True
-use_log_prior_for_gas_mass = True
+comp_option_mass = 0                              # 0 - relative mass, 1 - planet mass
+comp_option_radius = 1                            # 0 - transit depth, 1 - radius ratio, 2 - planet radius
+with_gas = True                                   # DON'T CHANGE, FEATURE NOT IMPLEMENTED YET
+with_water = True                                 # DON'T CHANGE, FEATURE NOT IMPLEMENTED YET
+use_log_prior_for_gas_mass = True                 # DON'T CHANGE, FEATURE NOT TESTED YET
 csv_file = 'stellar_planetary_parameters.csv'
 date_string=date.today().strftime("%Y-%m-%d")
 
